@@ -16,9 +16,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".restaurantFind"
-            android:label="@string/title_activity_restaurant_find"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+        android:name=".restaurantFind"
+        android:label="@string/title_activity_restaurant_find"
+        android:theme="@style/AppTheme.NoActionBar" ></activity>
+
     </application>
 
 </manifest>
