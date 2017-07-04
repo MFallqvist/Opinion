@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Opinion is an app which will change the way you provide feedback. "
-        android:id="@+id/textView"
+        android:id="@+id/responseTextView"
         android:layout_below="@+id/buttonSchool"
         android:layout_toEndOf="@+id/buttonSchool"
         android:layout_marginTop="80dp"
