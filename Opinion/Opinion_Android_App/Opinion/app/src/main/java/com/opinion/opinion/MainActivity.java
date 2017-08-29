@@ -22,16 +22,24 @@ public class MainActivity extends AppCompatActivity {
 
             this.responseTextView = (TextView) this.findViewById(R.id.responseTextView);
 
-            // Get data with AsyncTask
-            new GetAllCustomersBackgroundTask().execute(new ApiConnector());
+            // Get data with AsyncTask - need IP from Marvin
+           // new GetAllCustomersBackgroundTask().execute(new ApiConnector());
 
-            final Button button = (Button) findViewById(R.id.buttonRestaurant);
-            button.setOnClickListener(new View.OnClickListener() {
+            final Button buttonRestaurant = (Button) findViewById(R.id.buttonRestaurant);
+            buttonRestaurant.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     // Perform action on click
                     startRestaurantFinder(v);
                 }
             });
+            final Button buttonAddUser = (Button) findViewById(R.id.buttonRestaurant);
+            buttonAddUser.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    // Perform action on click
+                    addUser(v);
+                }
+            });
+
     }
 
     public void setTextToTextView(JSONArray jsonArray)
@@ -66,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /** Called when the user taps the Send button */
+    public void addUser(View view) {
+        Intent intent = new Intent(this, restaurantFind.class);
+        //EditText editText = (EditText) findViewById(R.id.editText);
+        //String message = editText.getText().toString();
+        //intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 
     /** Called when the user taps the Send button */
     public void startRestaurantFinder(View view) {
